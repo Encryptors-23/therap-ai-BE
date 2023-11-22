@@ -1,6 +1,9 @@
 import os
+from dotenv import load_dotenv
 
-SECRET_KEY = os.environ.get('SECRET_KEY') 
+load_dotenv()
+
+SECRET_KEY = os.environ.get('OPENAI_API_KEY') 
 if SECRET_KEY is None:
-    raise ValueError("SECRET_KEY is not set. Please set it as an environment variable.")
+    raise ValueError("OPENAI_API_KEY is not set. Please set it in the .env file.")
 DEBUG = True
