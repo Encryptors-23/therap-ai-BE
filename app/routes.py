@@ -4,6 +4,7 @@ from app.bot import get_response, test_response
 from flask import request, jsonify
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
+from app.encryption import encrypt, decrypt # here's the import of the encryption functions
 import os 
 
 backend = default_backend()
