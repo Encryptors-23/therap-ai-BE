@@ -5,7 +5,7 @@ from Crypto.Util.Padding import unpad
 from config import AES_KEY, IV
 
 
-# The secret key and IV used in the frontend - you can put them in an .env file, but remember to use b64decode() here
+# The secret key and IV are in an .env file, which is not included in the repo.
 secret_key = b64decode(AES_KEY)
 iv = b64decode(IV)
 
