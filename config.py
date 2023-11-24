@@ -15,4 +15,4 @@ IV = os.environ.get("IV")
 if IV is None:
     raise ValueError("Error: IV is not set. Please set it in the .env file.")
 
-DEBUG = True
+DEBUG = False
