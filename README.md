@@ -6,6 +6,8 @@
 
 **The main cryptography-related functions can be found in [encryption.py](./app/encryption.py), and they are used in [routes.py](./app/routes.py)**
 
+**The key and iv are randomly and securely generated and written to a .env file in [key.py](key.py)**
+
 The chatbot utilizes the OpenAI API, and the code can be found in [bot.py](./app/bot.py). Much of the setup was done on the OpenAI API panel, meaning that the application itself didn't need much code for inference.
 
 ### How to run
