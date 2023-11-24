@@ -2,10 +2,12 @@ from base64 import b64decode, b64encode
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 from Crypto.Util.Padding import unpad
+from config import AES_KEY, IV
+
 
 # The secret key and IV used in the frontend - you can put them in an .env file, but remember to use b64decode() here
-secret_key = b64decode("vl/VxRuThkD+v+9S7twDR/eT9v+mye2EvaF4ojeRhTM=")
-iv = b64decode("PynS/ydkhb2EUMzVty9sww==")
+secret_key = b64decode(AES_KEY)
+iv = b64decode(IV)
 
 def decrypt(hash):
     ciphertext = b64decode(hash)
@@ -20,3 +22,4 @@ def encrypt(plaintext):
 
     ciphertext = b64encode(cipher.encrypt(plaintext_bytes))
     return ciphertext.decode('utf-8')
+
